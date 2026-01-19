@@ -4,7 +4,6 @@ import { ConvexProviderWithClerk } from "convex/react-clerk";
 import {
     ClerkProvider,
     useAuth,
-    UserButton,
 } from "@clerk/nextjs";
 import { 
     Authenticated,
@@ -35,7 +34,6 @@ export function Providers({ children }: Props) {
                     disableTransitionOnChange
                 >
                     <Authenticated>
-                        <UserButton />
                         {children}
                     </Authenticated>
                     <Unauthenticated>
