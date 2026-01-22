@@ -38,7 +38,7 @@ const poppins = Poppins({
 
 export const Navbar = ({ projectId }: Props) => {
     const project = useProject(projectId);
-    const renameProject = useRenameProject(projectId);
+    const renameProject = useRenameProject();
 
     const [isRenaming, setIsRenaming] = useState(false);
     const [name, setName] = useState("");
