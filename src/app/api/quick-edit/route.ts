@@ -12,7 +12,7 @@ const quickEditSchema = z.object({
         .describe("The edited version of the selected code based on the instruction"),
 });
 
-const URL_REGEX = /https?:\/\/[^\s)>\]]/g;
+const URL_REGEX = /https?:\/\/[^\s)>\]]+/g;
 
 const QUICK_EDIT_PROMPT = `You are a code editing assistant. Edit the selected code based on the user's instruction.
 
@@ -46,7 +46,7 @@ export async function POST(request: Request) {
         if (!userId) {
             return NextResponse.json(
                 { error: "Unauthorized" },
-                { status :400 }
+                { status :403 }
             );
         }
 
