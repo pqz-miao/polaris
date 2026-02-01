@@ -68,7 +68,7 @@ const createQuickEditTooltip = (state: EditorState): readonly Tooltip[] => {
                 input.autofocus = true;
 
                 const buttonContainer = document.createElement("div");
-                buttonContainer.className = "flex item-center justify-between gap-2";
+                buttonContainer.className = "flex items-center justify-between gap-2";
 
                 const cancelButton = document.createElement("button");
                 cancelButton.type = "button";
